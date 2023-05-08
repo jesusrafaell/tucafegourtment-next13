@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '~tailwindcss/base';
-@import '~tailwindcss/components';
-@import '~tailwindcss/utilities';
+@import './_menu.scss';
 
 @font-face {
 	font-family: 'CustomFontName';
@@ -34,6 +32,10 @@
 	padding: 0;
 	box-sizing: border-box;
 	letter-spacing: 1px;
+}
+
+.fontColor {
+	background: #e4ddcd;
 }
 
 /* PRODUCT DETAILS CAROUSEL STYLING CUSTOMIZATION START */

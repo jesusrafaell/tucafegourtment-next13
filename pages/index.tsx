@@ -6,7 +6,7 @@ import ProductCard from '@/components/ProductCard';
 
 export default function Home({ products }: { products: any[] }) {
 	return (
-		<main>
+		<main className='fontColor'>
 			<HeroBanner />
 			{/* <Wrapper> */}
 			{/* heading and paragaph start */}

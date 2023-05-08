@@ -12,7 +12,8 @@ interface MenuItem {
 const data: MenuItem[] = [
 	{ id: 1, name: 'Home', url: '/' },
 	{ id: 2, name: 'About', url: '/about' },
-	{ id: 3, name: 'Categories', url: '/categories', subMenu: true },
+	{ id: 3, name: 'Shop', url: '/shop' },
+	// { id: 3, name: 'Shop', url: '/shop', subMenu: true },
 	{ id: 4, name: 'Contact', url: '/contact' },
 ];
 
