@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from 'react';
 import Wrapper from './Wrapper';
 
@@ -15,7 +16,7 @@ import { useSelector } from 'react-redux';
 const Header: React.FC = () => {
 	const [mobileMenu, setMobileMenu] = useState<boolean>(false);
 	const [showCatMenu, setShowCatMenu] = useState<boolean>(false);
-	const [show, setShow] = useState<string>('translate-y-0');
+	const [show, setShow] = useState<string>('h-[50px] md:h-[80px]');
 	const [lastScrollY, setLastScrollY] = useState<number>(0);
 	const [categories, setCategories] = useState<any>(null);
 
@@ -24,12 +25,17 @@ const Header: React.FC = () => {
 	const controlNavbar = () => {
 		if (window.scrollY > 200) {
 			if (window.scrollY > lastScrollY && !mobileMenu) {
-				setShow('-translate-y-[80px]');
+				// setShow('-translate-y-[80px]');
+				console.log('pase');
+				setShow('-h-[20px]- opacity-70');
 			} else {
-				setShow('shadow-sm');
+				// setShow('shadow-sm');
+				setShow('-h-[50px]-');
 			}
 		} else {
-			setShow('translate-y-0');
+			// setShow('translate-y-0');
+			setShow('h-[50px] md:h-[80px]');
+			console.log('aqui');
 		}
 		setLastScrollY(window.scrollY);
 	};
@@ -54,9 +60,9 @@ const Header: React.FC = () => {
 	return (
 		<header
 			//  bg-white
-			className={`w-full h-[50px] md:h-[80px] flex items-center justify-between z-20 sticky top-0 transition-transform duration-300 
-				${show}
+			className={`w-full flex items-center justify-between z-20 sticky top-0 transition-transform duration-300 
 				menu 
+				${show}
 			`}
 		>
 			<Wrapper className='h-[60px] flex justify-between items-center'>
@@ -64,7 +70,7 @@ const Header: React.FC = () => {
 					<img alt='logo' src='/logo.svg' className='w-[40px] md:w-[60px]' />
 				</Link>
 
-				<Menu showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu} categories={categories} />
+				<Menu />
 
 				{mobileMenu && (
 					<MenuMobile
