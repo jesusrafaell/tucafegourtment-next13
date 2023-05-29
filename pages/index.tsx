@@ -8,6 +8,7 @@ import ProductCard from '@/components/ProductCard';
 import HomePage from '@/sections/home';
 import Footer from '@/components/Footer';
 import About from '@/sections/about';
+import Shop from '@/sections/shop';
 
 export default function Home() {
 	return (
@@ -24,6 +25,7 @@ export default function Home() {
 			<Header />
 			<HomePage products={[]} />
 			<About />
+			<Shop />
 			<Footer />
 			{/* </Provider> } */}
 		</>

@@ -25,10 +25,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ url }) => {
 					{original_price && (
 						<>
 							<p className='text-base  font-medium line-through'>&#8377;{original_price}</p>
-							<p className='ml-auto text-base font-medium text-green-500'>
-								{/* {getDiscountedPricePercentage(original_price, price)}% off */}
-								{/* {getDiscountedPricePercentage(original_price, original)}% off */}
-							</p>
+							<p className='ml-auto text-base font-medium text-green-500'></p>
 						</>
 					)}
 				</div>
