@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 interface Props {
 	children: ReactNode;
 	id: string;
-	style?: string;
+	style: string;
 }
 
 const Section = ({ children, id, style }: Props) => {

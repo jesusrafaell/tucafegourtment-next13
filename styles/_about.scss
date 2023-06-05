@@ -1,0 +1,44 @@
+.grid-about-gap {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.bg-about-content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50vw;
+	height: 100%;
+	background-color: #333131;
+	z-index: 0;
+}
+
+.m-about {
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+.title-about {
+	top: 10%;
+	left: 1rem;
+	font-size: 2rem;
+	color: #d7d1c2;
+}
+
+.title-page-about {
+	color: #fff;
+	margin-left: 2rem;
+}
+
+.content-about {
+	width: 100%;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	margin-top: 5rem;
+}
+
+.content-about p {
+	color: #fff;
+}

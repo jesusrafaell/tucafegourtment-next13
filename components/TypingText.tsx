@@ -1,13 +1,14 @@
-import { textContainer, textVariant } from '@/utils/monition';
+import { bgContainer, textContainer, textVariant } from '@/utils/monition';
 import { motion } from 'framer-motion';
 
 interface Props {
 	color: string;
 	align: string;
 	title: string;
+	style?: string;
 }
 
-export const RunningText = ({ color, align }: Props) => {
+export const RunningText = ({ color, align, title }: Props) => {
 	return (
 		<motion.p
 			variants={textContainer}
@@ -17,7 +18,7 @@ export const RunningText = ({ color, align }: Props) => {
 				color && align ? `text-[${color}] text-[${align}]` : 'text-center text-gray-500'
 			} mt-10 font-semibold`}
 		>
-			{Array.from('| FreshCoffee').map((letter, index) => (
+			{Array.from(title).map((letter, index) => (
 				<motion.span key={index} variants={textVariant}>
 					{letter}
 				</motion.span>
@@ -26,17 +27,33 @@ export const RunningText = ({ color, align }: Props) => {
 	);
 };
 
-export const TitlePage = ({ title, color, align }: Props) => {
+export const TitlePage = ({ title, color, align, style }: Props) => (
+	<motion.h2
+		variants={textVariant}
+		initial='hidden'
+		whileInView='show'
+		transition={{ duration: 0.5 }}
+		className={`${
+			color && align ? `text-[${color}] text-[${align}]` : 'text-center text-gray-700'
+		} text-4xl font-semibold mt-4 ${style}`}
+	>
+		{title}
+	</motion.h2>
+);
+
+export const BgContent = () => {
 	return (
-		<motion.h2
-			variants={textVariant}
+		<motion.div
+			variants={bgContainer}
 			initial='hidden'
 			whileInView='show'
-			className={`${
-				color && align ? `text-[${color}] text-[${align}]` : 'text-center text-gray-700'
-			} text-4xl font-semibold mt-4`}
-		>
-			{title}
-		</motion.h2>
+			// className='bg-about-content absolute top-0 right-0 w-[100%] h-full bg-[#333131] z-0'
+			className='bg-about-content'
+			transition={{ duration: 0.5 }}
+		></motion.div>
 	);
 };
+
+// 	initial={{ x: '100%' }}
+// 	animate={{ x: 0 }}
+// >

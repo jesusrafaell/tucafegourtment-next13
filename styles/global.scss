@@ -1,8 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @import './_menu.scss';
+@import './_about.scss';
 
 @font-face {
 	font-family: 'CustomFontName';
@@ -19,7 +20,7 @@
 	font-style: normal;
 }
 
-:root {
+/* :root {
 	font-family: 'Urbanist', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
@@ -32,20 +33,15 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
-}
+} */
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	letter-spacing: 1px;
-}
-
+html,
 body {
-	padding: 0;
+	font-family: 'Urbanist', sans-serif;
 	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
-	/* font-family: 'Poppins', sans-serif; */
+	box-sizing: border-box;
 	font-family: 'Nunito', sans-serif;
 	background-color: rgb(226, 226, 226);
 	overflow-x: hidden;

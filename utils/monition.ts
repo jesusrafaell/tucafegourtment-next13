@@ -21,3 +21,17 @@ export const textVariant = {
 		},
 	},
 };
+
+export const bgContainer = {
+	hidden: {
+		opacity: 1,
+		x: '90%',
+	},
+	show: {
+		opacity: 1,
+		x: '0',
+		transition: {
+			ease: 'easeIn',
+		},
+	},
+};

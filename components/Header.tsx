@@ -60,9 +60,8 @@ const Header: React.FC = () => {
 	return (
 		<header
 			//  bg-white
-			className={`w-full flex items-center justify-between z-20 sticky top-0 transition-transform duration-300 
-				menu 
-				${show}
+			className={`
+				w-full flex items-center justify-between z-20  top-0 transition-transform duration-300 fixed menu ${show} 
 			`}
 		>
 			<Wrapper className='h-[60px] flex justify-between items-center'>

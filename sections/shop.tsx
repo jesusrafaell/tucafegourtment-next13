@@ -7,7 +7,6 @@ const Shop = () => {
 	return (
 		<Section id='Shop' style='bg-black'>
 			<div className='h-screen grid grid-cols-2 bg-black'>
-				<div className='absolute top-0 right-0 w-1/2 h-full bg-[#333131] z-0' />
 				<h1 className='absolute top-10 left-10 text-6xl font-bold text-white opacity-10'>Shop1</h1>
 				<div>
 					<RunningText color='#7d7d7d' align='left' title='Shop' />

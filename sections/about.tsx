@@ -1,21 +1,39 @@
 import Image from 'next/image';
-import { RunningText, TitlePage } from '@/components/TypingText';
+import { BgContent, RunningText, TitlePage } from '@/components/TypingText';
 import Section from '@/components/Section';
+import { useState } from 'react';
 
 const About = () => {
+	const [aqui, setAqui] = useState(false);
+	console.log(aqui);
 	return (
-		<Section id='About'>
-			<div className='h-screen grid grid-cols-2'>
-				<div className='flex justify-center items-center p-100'>
-					<Image src='/image/coffee-shop.jpg' alt='coffee-shop' width={300} height={300} className='rounded-xl' />
+		<Section id='About' style='m-about'>
+			{/* <div className='h-screen grid grid-cols-2'> */}
+			{/* fondo del contenido */}
+			<div className='h-screen grid-about-gap'>
+				{/* Columna 1 */}
+				<div className='flex justify-center items-center'>
+					<Image
+						src='/image/coffee-shop.jpg'
+						alt='coffee-shop'
+						width={350}
+						height={500}
+						style={{
+							borderRadius: '1rem',
+						}}
+					/>
 				</div>
-				<div className='absolute top-0 right-0 w-1/2 h-full bg-[#333131] z-0' />
+
+				{/* bg del contenido */}
+				<BgContent />
+
+				{/* Contenido de la columna 2 */}
 				<div className='z-50 py-8 px-10 relative flex justify-start items-center'>
-					<h1 className='absolute top-10 left-10 text-6xl font-bold text-white opacity-10'>freshcoffee</h1>
+					<h1 className='absolute  text-6xl font-bold text-[#e8e8e8] opacity-10 title-about'>Tu cafe Gourmet</h1>
 					<div>
-						<RunningText color='#7d7d7d' align='left' title='About us' />
-						<TitlePage title='About us' color='#e8e8e8' align='left' />
-						<div className='mt-8 text-[#e8e8e8] text-lg font-regular text-justify'>
+						<RunningText color='#7d7d7d' align='left' title='' />
+						<TitlePage title='Our me' color='#fff' style='title-page-about' align='left' />
+						<div className='mt-8 text-[#e8e8e8] text-lg font-regular text-justify justify-center items-center flex content-about'>
 							<p className='opacity-90'>
 								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
 								industries standard dummy text ever since the 1500s, when an unknown printer took a galley of type
