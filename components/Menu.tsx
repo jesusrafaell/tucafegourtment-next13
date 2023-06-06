@@ -9,7 +9,7 @@ const Menu: React.FC = () => {
 			{listMenu.map((item) => {
 				return (
 					<li key={item.id} className='cursor-pointer hover:underline'>
-						<Link to={item.name} smooth offset={0} duration={500}>
+						<Link to={item.name} offset={0} duration={400}>
 							{item.name}
 						</Link>
 					</li>

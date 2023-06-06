@@ -47,7 +47,6 @@ export const BgContent = () => {
 			variants={bgContainer}
 			initial='hidden'
 			whileInView='show'
-			// className='bg-about-content absolute top-0 right-0 w-[100%] h-full bg-[#333131] z-0'
 			className='bg-about-content'
 			transition={{ duration: 0.5 }}
 		></motion.div>
